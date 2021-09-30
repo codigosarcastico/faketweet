@@ -1,0 +1,222 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  background-color: var(--primary-dark);
+  color: var(--foreground);
+}
+
+*[contentEditable] {
+  transition: all 200ms linear;
+}
+
+*[contentEditable]:focus {
+  outline: dashed 2px var(--accent);
+  /* outline-offset: 0.5rem; */
+  padding: 0.5rem;
+  font-size: 30px;
+}
+
+svg {
+  display: block;
+  fill: var(--tweet-label);
+  font-weight: 400;
+  font-size: 16px;
+  max-width: 20px;
+  min-height: 20px;
+}
+
+.canva {
+  display: block;
+  width: 100vw;
+  border: double;
+  padding: 1rem;
+}
+
+.canva__container {
+  display: block;
+  width: min(600px, 100%);
+  margin: 0 auto;
+}
+
+.tweet {
+  display: block;
+  background-color: var(--tweet-default);
+  color: var(--tweet-foreground);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.tweet button {
+  border: none;
+  cursor: pointer;
+  /* width: 38.5px;
+  height: 38.5px; */
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: transparent;
+}
+
+.tweet button:hover,
+.tweet button:focus {
+  background-color: var(--tweet-accent-alpha);
+}
+
+.tweet button:hover svg,
+.tweet button:focus svg {
+  fill: var(--tweet-accent);
+}
+
+.tweet__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  position: relative;
+}
+
+.tweet__avatar {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.tweet__avatar:hover {
+  outline: dashed 2px var(--accent);
+  outline-offset: 0.5rem;
+  /* padding: 0.5rem; */
+}
+
+.tweet__naming {
+  display: block;
+  margin: 0;
+}
+
+.tweet__name,
+.tweet__username {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.tweet__name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tweet__username {
+  font-weight: 400;
+  color: var(--tweet-label);
+  text-transform: lowercase;
+}
+
+.tweet__verified {
+  display: block;
+  margin-left: 2px;
+}
+
+.tweet__verified svg {
+  fill: var(--accent);
+}
+
+.tweet__more {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-18px);
+}
+
+.tweet__body {
+  display: block;
+  padding-top: 1rem;
+}
+
+.tweet__note {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.tweet__note b {
+  color: var(--tweet-accent);
+  font-weight: normal;
+}
+
+.tweet__translate {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 13px;
+  color: var(--tweet-accent);
+}
+
+.tweet__date {
+  color: var(--tweet-label);
+  font-size: 15px;
+  margin: 1rem 0;
+}
+
+.tweet__footer {
+  display: flex;
+  padding: 1rem 0;
+  border-width: 1px;
+  border-color: var(--tweet-border);
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+.tweet__rt,
+.tweet__quotes {
+  display: block;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.tweet__rt-text,
+.tweet__quotes-text,
+.tweet__likes-text {
+  font-weight: 400;
+  color: var(--tweet-label);
+}
+
+.tweet__options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0.4rem 0;
+  border-width: 1px;
+  border-color: var(--tweet-border);
+  border-bottom-style: solid;
+}
+
+.tweet__button.rt.active svg {
+  fill: rgb(0, 186, 124);
+}
+
+.tweet__button.likes.active svg {
+  fill: #f91880;
+}
+
+.tweet__button.likes:hover svg {
+  fill: #f91880;
+}
+
+#filePhoto {
+  display: none;
+}
+
+#progressUpload {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10px;
+}

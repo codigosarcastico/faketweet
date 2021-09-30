@@ -1,0 +1,19 @@
+:root {
+  --primary: #37474f;
+  --primary-light: #62727b;
+  --primary-dark: #102027;
+
+  --secondary: #0277bd;
+  --secondary-light: #58a5f0;
+  --secondary-dark: #004c8c;
+
+  --tweet-default: #fff;
+  --tweet-foreground: rgb(15, 20, 25);
+  --tweet-accent: #1b95e0;
+  --tweet-accent-alpha: rgba(27, 148, 224, 0.15);
+  --tweet-label: #536471;
+  --tweet-border: #eff3f4;
+
+  --accent: #1d9bf0;
+  --foreground: #fff;
+}
