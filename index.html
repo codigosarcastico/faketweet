@@ -7,42 +7,29 @@
     <title>Fake Tweet</title>
     <meta name="desc" content="App para crear tweet falsos" />
 
-    <link
-      rel="shortcut icon"
-      href="//abs.twimg.com/favicons/twitter.ico"
-      type="image/x-icon"
-    />
+    
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="mask-icon" sizes="any" href="./img/icon-svg.168b89d5.svg" color="#1da1f2">
+    <link rel="shortcut icon" href="./img/twitter.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="192x192" href="./img/icon-ios.b1fc7275.png" />
 
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>App Fake Tweet</h1>
-
     <main class="canva">
       <div class="canva__container">
         <article class="tweet" id="tweet">
           <input type="file" name="file-photo" id="filePhoto" />
 
           <div class="tweet__header">
-            <img
-              src="https://pbs.twimg.com/profile_images/1399390887596150788/j_sfA0Yh_normal.jpg"
-              alt=""
-              class="tweet__avatar"
-            />
+            <img src="./img/unnamed.jpg" alt="" class="tweet__avatar" />
 
             <div class="tweet__naming">
               <h2 class="tweet__name" contenteditable="true">
                 Full Name
-                <span class="tweet__verified">
+                <span class="tweet__verified" id="verified">
                   <svg
                     viewBox="0 0 24 24"
                     aria-label="Verified account"
@@ -75,12 +62,20 @@
           <!-- header -->
 
           <div class="tweet__body">
-            <p class="tweet__note" contenteditable="true">
-              Lorem ipsum <b>#dolor</b> sit amet, consectetur adipisicing elit.
-              Ipsam aperiam natus, repellat ullam hic <b>@molestiae</b>.
-            </p>
+            <div class="tweet__note" contenteditable="true">¡Aprende a <b>#dudar</b> de todo!😉
+
+Estamos en la mejor época para manipular...te🎃 desde <b>@twitter</b> o cualquier otra <b>#redsocial</b></div>
 
             <p class="tweet__translate">Translate Tweet</p>
+
+            <figure class="tweet__media">
+              <!-- <img
+                src="https://via.placeholder.com/1280x720/15202b/ffffff/?text=Upload your image"
+                alt="photo media"
+                class="tweet__media-photo"
+                lazyload
+              /> -->
+            </figure>
 
             <p class="tweet__date">
               <span class="tweet__hour" contenteditable="true">8:53 PM</span>
@@ -111,8 +106,8 @@
             </div>
 
             <div class="tweet__likes">
-              <b class="tweet__likes-n" contenteditable="true">1,010</b>
-              <span class="tweet__likes-text">Likes</span>
+              <b class="tweet__likes-n" contenteditable="true">10</b
+              ><span class="tweet__likes-text">Likes</span>
             </div>
           </div>
           <!-- FOOTER -->
@@ -128,7 +123,7 @@
               </svg>
             </button>
 
-            <button class="tweet__button rt active">
+            <button class="tweet__button rt">
               <svg viewBox="0 0 24 24">
                 <g>
                   <path
@@ -148,14 +143,14 @@
               </svg>
             </button>
 
-            <button class="tweet__button likes active">
-              <svg viewBox="0 0 24 24">
+            <button class="tweet__button likes">
+              <!-- <svg viewBox="0 0 24 24">
                 <g>
                   <path
                     d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"
                   ></path>
                 </g>
-              </svg>
+              </svg> -->
             </button>
           </div>
 
@@ -165,6 +160,117 @@
       </div>
     </main>
 
+    <section class="options">
+      <div class="options__contents">
+        <h2 class="options__header">Custom your fake tweet</h2>
+
+        <div class="options__theme">
+          <h3 class="options__theme-heading">Theme</h3>
+          <div class="options__theme-scheme">
+            <div class="options__theme-palett-default">
+              <label for="schemeDefault" class="options__theme-label">
+                <input type="radio" id="schemeDefault" name="scheme" checked />
+                Default
+              </label>
+            </div>
+            <!-- Paleta Default -->
+
+            <div class="options__theme-palett-dim">
+              <label for="schemeDim" class="options__theme-label">
+                <input type="radio" id="schemeDim" name="scheme" /> Dim
+              </label>
+            </div>
+            <!-- Paleta Dim -->
+
+            <div class="options__theme-palett-dark">
+              <label for="schemeDark" class="options__theme-label">
+                <input type="radio" id="schemeDark" name="scheme" /> Dark
+              </label>
+            </div>
+            <!-- Paleta Dark -->
+          </div>
+        </div>
+        <button class="done">Done</button>
+
+        <!-- THEME -->
+
+        <div class="options__verified">
+          <h3 class="options__verified-heading">Account Information</h3>
+          <label for="isVerified">
+            <input
+              type="radio"
+              name="isverified"
+              id="isVerified"
+              class="options__verified-radio"
+              value="true"
+              checked
+            />
+
+            Verified
+          </label>
+          <label for="noVerified">
+            <input
+              type="radio"
+              name="isverified"
+              id="noVerified"
+              class="options__verified-radio"
+              value="false"
+            />
+
+            Unverified
+          </label>
+        </div>
+        <!-- VERIFIED -->
+
+        <div class="options__map">
+          <h3 class="options__map-heading">Address</h3>
+
+          <label for="isMap">
+            <input
+              type="radio"
+              name="isMap"
+              id="isMap"
+              class="options__map-radio"
+              checked
+            />
+
+            Yes
+          </label>
+
+          <label for="noMap">
+            <input
+              type="radio"
+              name="isMap"
+              id="noMap"
+              class="options__map-radio"
+            />
+            No
+          </label>
+        </div>
+        <!-- MAP -->
+
+        <div class="options__media">
+          <h3 class="options__media-heading">Media</h3>
+          <input type="file" class="option__media-file" id="fileMedia" />
+          <button class="option__media-reset">Delete media photo</button>
+        </div>
+      </div>
+    </section>
+
+    <button id="capture">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <title>
+          Camera, Device, Gadget, Image, Photo, Photography, Picture
+        </title>
+        <g id="Layer_5" data-name="Layer 5">
+          <path
+            d="M44,35A11,11,0,1,1,33,24,11,11,0,0,1,44,35ZM62,18V52a6,6,0,0,1-6,6H8a6,6,0,0,1-6-6V18a6,6,0,0,1,6-6H56A6,6,0,0,1,62,18ZM16,22a4,4,0,1,0-4,4A4,4,0,0,0,16,22ZM48,35A15,15,0,1,0,33,50,15,15,0,0,0,48,35ZM43,8a2,2,0,0,0-2-2H23a2,2,0,0,0,0,4H41A2,2,0,0,0,43,8Z"
+          />
+        </g>
+      </svg>
+    </button>
+
+    <script src="./js/dom-to-image.min.js"></script>
     <script src="./js/app.js" type="module"></script>
   </body>
 </html>
