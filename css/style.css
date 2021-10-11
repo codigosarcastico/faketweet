@@ -469,3 +469,18 @@ svg {
     transform: scale(1) translateX(0px) rotate(0deg);
   }
 }
+
+
+.ddmm{
+  font-size: 4rem;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.ddmm svg{
+  display: inline-block;  
+  fill: white;
+   max-width: 80px;
+   margin: 0 auto;
+}
